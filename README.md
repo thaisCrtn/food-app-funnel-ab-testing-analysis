@@ -122,32 +122,6 @@ new fonts improved or harmed user behavior. Based on this experiment,
 there is not enough evidence to recommend changing the fonts as a way to
 improve app performance.
 
-## Repository Structure
-
-``` text
-.
-├── EDA_project_English.ipynb
-└── README.md
-```
-
-If you add the dataset to the repository, consider storing it in a
-separate `data/` directory and documenting its source and any access
-restrictions.
-
-## How to Run
-
-1.  Clone or download this repository.
-2.  Install the required libraries.
-3.  Open `EDA_project_English.ipynb` in Jupyter Notebook or JupyterLab.
-4.  Update the dataset path in the notebook if necessary.
-5.  Run the cells in order to reproduce the analysis.
-
-Example installation command:
-
-``` bash
-pip install pandas numpy matplotlib seaborn scipy statsmodels jupyter
-```
-
 ## Skills Demonstrated
 
 -   Exploratory data analysis (EDA)

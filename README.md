@@ -2,12 +2,13 @@
 
 ## Project Overview
 
-This project analyzes user behavior in a food-products company's mobile
-app. It combines exploratory data analysis (EDA), sales-funnel analysis,
-and an A/A/B experiment to evaluate whether changing the app's fonts had
-a measurable effect on user behavior.
+This project explores user behavior in a food-products company's mobile
+app. It combines **SQL-based data querying** with **Python exploratory
+data analysis (EDA)**, sales-funnel analysis, and an A/A/B experiment to
+investigate whether changing the app's fonts had a measurable effect on
+user behavior.
 
-The analysis uses event logs to understand how users move through the
+The project uses event data to understand how users move through the
 purchase journey, identify where users drop off, and compare conversion
 behavior across three experiment groups.
 
@@ -41,34 +42,41 @@ more complete and consistent from **August 1, 2019**, so the analysis
 focuses on **August 1--7, 2019**. During data validation, 413 duplicate
 records were identified and removed.
 
-## Tools & Libraries
+## Tools & Technologies
 
--   **Python**
+-   **SQL** --- querying and exploring data (see the `sql/` folder)
+-   **Python** --- analysis workflow
 -   **Pandas** --- data cleaning, manipulation, and aggregation
 -   **NumPy** --- numerical operations
 -   **Matplotlib** and **Seaborn** --- data visualization
 -   **SciPy** --- statistical analysis
 -   **Statsmodels** --- two-proportion z-tests
+-   **Jupyter Notebook** --- documenting and running the analysis
 
 ## Project Workflow
 
-1.  **Data loading and preparation**
+1.  **SQL querying**
+    -   Use the SQL scripts in the `sql/` folder to query or explore the
+        data.
+    -   Review the SQL files to see the specific queries and questions
+        addressed.
+2.  **Data loading and preparation**
     -   Load the event-log dataset.
     -   Standardize column names.
     -   Check for and remove duplicate records.
-2.  **Data exploration and validation**
+3.  **Data exploration and validation**
     -   Review event and user counts.
     -   Calculate the average number of events per user.
     -   Examine the time coverage and identify the period with more
         complete data.
     -   Filter the dataset to August 1--7, 2019.
-3.  **Sales funnel analysis**
+4.  **Sales funnel analysis**
     -   Count events and unique users by event.
     -   Build the main purchase journey:
         `MainScreenAppear → OffersScreenAppear → CartScreenAppear → PaymentScreenSuccessful`
     -   Calculate user conversion between funnel stages.
     -   Identify the largest drop-off point.
-4.  **A/A/B experiment analysis**
+5.  **A/A/B experiment analysis**
     -   Compare control groups 246 and 247 to check whether their
         behavior is statistically similar.
     -   Compare test group 248 with each control group and with the
@@ -122,8 +130,19 @@ new fonts improved or harmed user behavior. Based on this experiment,
 there is not enough evidence to recommend changing the fonts as a way to
 improve app performance.
 
+## Repository Structure
+
+``` text
+├── notebooks
+    └── EDA.ipynb
+├── sql/
+    └── analysis.sql   
+└── README.md
+```
+
 ## Skills Demonstrated
 
+-   SQL querying and data exploration
 -   Exploratory data analysis (EDA)
 -   Data cleaning and validation
 -   Duplicate detection and handling
@@ -138,5 +157,5 @@ improve app performance.
 ------------------------------------------------------------------------
 
 *This project was completed as a data analytics portfolio project. The
-findings and recommendations are based on the dataset and analysis
-documented in the notebook.*
+findings and recommendations are based on the analysis documented in the
+SQL scripts and notebook.*
